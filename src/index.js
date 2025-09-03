@@ -7,9 +7,6 @@ import App from "./App";
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 
 import Page from "./components/Page";
-//import Teaser from "./components/Teaser";
-//import Grid from "./components/Grid";
-//import Feature from "./components/Feature";
 import PageHeader from "./components/PageHeader";
 import PageDescription from "./components/PageDescription";
 import BandsPage from "./components/BandsPage";
