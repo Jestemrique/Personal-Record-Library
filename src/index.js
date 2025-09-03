@@ -21,6 +21,7 @@ import Album from "./components/Album.js";
 
 
 storyblokInit({
+  bridge: process.env.REACT_APP_STORYBLOK_IS_PREVIEW === 'true' ? true : false,
   accessToken: process.env.REACT_APP_STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {

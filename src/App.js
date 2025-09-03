@@ -2,8 +2,8 @@ import { useStoryblok, StoryblokComponent } from "@storyblok/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import getVersion from "./utils/getVersion";
 
-//import NavBar from "./components/MainNavigation.js";
 
 
 function App() {
@@ -14,11 +14,8 @@ function App() {
       ? "home"
       : window.location.pathname.replace("/", "");
   
-  //const navStory = useStoryblok("main-navigation", { version: "draft" });
-  const navStory = useStoryblok("main-navigation", { version: "published" });
-  console.log("Nav Story:", navStory);
-  const story = useStoryblok(slug, { version: "draft" });
-
+    const navStory = useStoryblok("main-navigation", { version: getVersion() } );
+    const story = useStoryblok(slug, { version: getVersion() });
   if (!story || !story.content) {
     return <div>Loading...</div>;
   }
