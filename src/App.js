@@ -14,7 +14,8 @@ function App() {
       ? "home"
       : window.location.pathname.replace("/", "");
   
-  const navStory = useStoryblok("main-navigation", { version: "draft" });
+  //const navStory = useStoryblok("main-navigation", { version: "draft" });
+  const navStory = useStoryblok("main-navigation", { version: "published" });
   console.log("Nav Story:", navStory);
   const story = useStoryblok(slug, { version: "draft" });
 
