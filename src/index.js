@@ -25,9 +25,6 @@ storyblokInit({
   use: [apiPlugin],
   components: {
     page: Page,
-    //teaser: Teaser,
-    //grid: Grid,
-    //feature: Feature,
     page_header: PageHeader,
     page_description: PageDescription,
     bands_page: BandsPage,
