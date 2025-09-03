@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStoryblokApi } from "@storyblok/react";
 import { Link } from "react-router-dom";
+import getVersion from "../utils/getVersion";
 
 const Bands = () => {
   const [bands, setBands] = useState([]);
@@ -11,7 +12,7 @@ const Bands = () => {
       try {
         const res = await storyblokApi.get("cdn/stories", {
           starts_with: "bands-folder/",
-          version: "draft",
+          version: getVersion(),
         });
         setBands(res.data.stories);
       } catch (err) {

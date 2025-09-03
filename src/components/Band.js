@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStoryblokApi } from "@storyblok/react";
-import { useLocation } from "react-router-dom"; 
+import { useLocation } from "react-router-dom";
+import getVersion from "../utils/getVersion";  
 
 const LAST_FM_API_KEY = process.env.REACT_APP_LASTFM_API_KEY;
 
@@ -23,7 +24,7 @@ const Band = () => {
       try {
         const res = await storyblokApi.get("cdn/stories", {
           starts_with: `bands-folder/${lastSegment}`,
-          version: "draft",
+          version: getVersion(),
         });
 
         const story = res.data.stories[0];
