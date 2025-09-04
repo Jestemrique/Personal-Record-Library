@@ -25,7 +25,6 @@ const Bands = () => {
 
   return (
     <aside className="menu">
-            <p>this is Bands.js</p>
       <ul className="menu-list">
         {bands.map((band) => (
           <li key={band.id}>
