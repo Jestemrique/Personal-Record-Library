@@ -51,25 +51,3 @@ const NavBar = ({ blok }) => {
 };
 
 export default NavBar;
-
-
-
-
-
-// import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
-
-// const NavBar = ({ blok }) => {
-//     if (!blok || !blok.Items) {
-//       return null;
-//     }
-
-//     return (
-//         <nav {...storyblokEditable(blok)}>
-//             {blok.Items.map((item) => (
-//                 <StoryblokComponent blok={item} key={item._uid} />
-//             ))}
-//         </nav>
-//     );
-// };
-
-// export default NavBar;
