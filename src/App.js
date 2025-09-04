@@ -23,7 +23,6 @@ function App() {
 
   return (
     <>
-      {/* <NavBar blok={navStory?.content} /> */}
       <NavBar blok={navStory?.content} />
       <Routes>
         <Route path="/" element={<StoryblokComponent blok={story.content} />} />
