@@ -15,7 +15,6 @@ import AlbumsPage from "./components/AlbumsPage";
 import Albums from "./components/Albums";
 import NavBar from "./components/NavBar.js";
 import NavItem from "./components/NavItem.js";
-import BandPage from "./components/BandPage.js";
 import Band from "./components/Band.js";
 import Album from "./components/Album.js";
 
@@ -34,7 +33,6 @@ storyblokInit({
     albums: Albums,
     nav_bar: NavBar,
     nav_item: NavItem,
-    band_page: BandPage,
     band: Band,
     album: Album,
 
